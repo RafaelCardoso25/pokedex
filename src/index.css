@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --red: #dc0a2d;
+  --red-dark: #a6001c;
+  --bg: #f4f1ea;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6b6b73;
+  --border: #e3ded3;
+  --radius: 18px;
+  --shadow: 0 6px 18px rgba(30, 20, 10, 0.08);
+  --surface-hover: #ffffff;
+  --input-bg: #f4f1ea;
+  --tint: #000;
+  --dots: rgba(220, 10, 45, 0.06);
+  --overlay: rgba(15, 10, 10, 0.6);
+
+  font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root[data-theme='dark'] {
+  --bg: #121216;
+  --surface: #1d1d24;
+  --text: #f1f0f5;
+  --muted: #a3a2ad;
+  --border: #2e2e38;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  --surface-hover: #26262f;
+  --input-bg: #16161b;
+  --tint: #fff;
+  --dots: rgba(255, 255, 255, 0.05);
+  --overlay: rgba(0, 0, 0, 0.72);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--dots) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.image-fallback {
+  opacity: 0.35;
+  padding: 18%;
+}

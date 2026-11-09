@@ -1,0 +1,32 @@
+.type-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.type-filter-btn {
+  --type-color: var(--text);
+  padding: 6px 14px;
+  border: 2px solid var(--type-color);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--type-color) 10%, transparent);
+  color: color-mix(in srgb, var(--type-color) 60%, var(--tint));
+  font-size: 0.85rem;
+  font-weight: 800;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.type-filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.type-filter-btn.active {
+  background: var(--type-color);
+  color: var(--surface);
+  text-shadow: none;
+}
+
+.type-filter-btn.active:not(:first-child) {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
